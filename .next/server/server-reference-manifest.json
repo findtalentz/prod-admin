@@ -1,0 +1,91 @@
+{
+  "node": {
+    "0066f056477e30bc3c69cd7aba6cffef43dd88fd05": {
+      "workers": {
+        "app/dashboard/blog/[id]/page": {
+          "moduleId": 23308,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/blog/new/page": {
+          "moduleId": 70983,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/blog/page": {
+          "moduleId": 95575,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/categorys/page": {
+          "moduleId": 22614,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/kyc/page": {
+          "moduleId": 39631,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": 48686,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/payments/page": {
+          "moduleId": 78147,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/settings/page": {
+          "moduleId": 55884,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/dashboard/users/page": {
+          "moduleId": 12597,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/log-in/page": {
+          "moduleId": 93708,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        },
+        "app/sign-up/page": {
+          "moduleId": 15199,
+          "async": false,
+          "exportedName": "default",
+          "filename": "actions/get-session-from-token.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/blog/[id]/page": "rsc",
+        "app/dashboard/blog/new/page": "action-browser",
+        "app/dashboard/blog/page": "rsc",
+        "app/dashboard/categorys/page": "action-browser",
+        "app/dashboard/kyc/page": "rsc",
+        "app/dashboard/page": "action-browser",
+        "app/dashboard/payments/page": "rsc",
+        "app/dashboard/settings/page": "action-browser",
+        "app/dashboard/users/page": "rsc",
+        "app/log-in/page": "action-browser",
+        "app/sign-up/page": "action-browser"
+      },
+      "filename": "actions/get-session-from-token.ts",
+      "exportedName": "default"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "g01nlHYhKrt0yrPBJGK1nE8smKuKGndZAi9qvUGW/6g="
+}

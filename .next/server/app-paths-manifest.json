@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dashboard/blog/[id]/page": "app/dashboard/blog/[id]/page.js",
+  "/dashboard/blog/new/page": "app/dashboard/blog/new/page.js",
+  "/dashboard/blog/page": "app/dashboard/blog/page.js",
+  "/dashboard/categorys/page": "app/dashboard/categorys/page.js",
+  "/dashboard/kyc/page": "app/dashboard/kyc/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/payments/page": "app/dashboard/payments/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js",
+  "/dashboard/users/page": "app/dashboard/users/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/log-in/page": "app/log-in/page.js",
+  "/page": "app/page.js",
+  "/sign-up/page": "app/sign-up/page.js"
+}
