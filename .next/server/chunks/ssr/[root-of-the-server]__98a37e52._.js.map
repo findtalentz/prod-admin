@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../app/dashboard/settings/page.tsx"],"sourcesContent":["const Settings = () => {\n  return <div>Settings</div>;\n};\n\nexport default Settings;\n"],"names":[],"mappings":"iYAAiB,IACR,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI"}
