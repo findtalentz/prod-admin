@@ -5,11 +5,14 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import {
+  ArrowLeftRight,
+  Briefcase,
   House,
   IdCard,
   LayoutGrid,
   NotebookPen,
   Receipt,
+  Scale,
   Settings,
   Users,
 } from "lucide-react";
@@ -42,18 +45,36 @@ const items = [
   },
   {
     id: 5,
+    title: "Transactions",
+    url: "/dashboard/transactions",
+    icon: ArrowLeftRight,
+  },
+  {
+    id: 6,
     title: "Payments",
     url: "/dashboard/payments",
     icon: Receipt,
   },
   {
-    id: 6,
+    id: 7,
+    title: "Disputes",
+    url: "/dashboard/disputes",
+    icon: Scale,
+  },
+  {
+    id: 8,
+    title: "Jobs",
+    url: "/dashboard/jobs",
+    icon: Briefcase,
+  },
+  {
+    id: 9,
     title: "KYC",
     url: "/dashboard/kyc",
     icon: IdCard,
   },
   {
-    id: 7,
+    id: 10,
     title: "Settings",
     url: "/dashboard/settings",
     icon: Settings,
