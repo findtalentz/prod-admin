@@ -111,7 +111,7 @@ const CategoryForm = () => {
     try {
       if (selectedCategory) {
         const { data } = await apiClient.put<APIResponse<string>>(
-          `/categorys/${selectedCategory._id}`,
+          `/categories/${selectedCategory._id}`,
           {
             ...values,
             image,
@@ -121,7 +121,7 @@ const CategoryForm = () => {
         clearCategory();
       } else {
         const { data } = await apiClient.post<APIResponse<string>>(
-          "/categorys",
+          "/categories",
           {
             ...values,
             image,

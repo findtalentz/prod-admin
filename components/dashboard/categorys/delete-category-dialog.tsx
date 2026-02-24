@@ -29,7 +29,7 @@ export default function DeleteCategoryDialog({ categoryId }: Props) {
   const onDelete = async () => {
     setLoading(true);
     try {
-      await apiClient.delete(`/categorys/${categoryId}`);
+      await apiClient.delete(`/categories/${categoryId}`);
       queryClient.invalidateQueries({ queryKey: ["categorys"] });
       setOpen(false);
     } catch (error) {

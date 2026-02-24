@@ -8,7 +8,7 @@ import { PaymentRequest } from "@/types/PaymentRequest";
 export default async function Payments() {
   const { data: paymentMethods } = await apiClient.get<
     APIResponse<PaymentMethod[]>
-  >("payment-methods/all");
+  >("/payment-methods/all");
   const { data: paymentRequests } = await apiClient.get<
     APIResponse<PaymentRequest[]>
   >("/withdraws");

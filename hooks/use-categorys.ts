@@ -8,7 +8,7 @@ const useCategorys = () => {
     queryKey: ["categorys"],
     queryFn: () =>
       apiClient
-        .get<APIResponse<Category[]>>("/categorys")
+        .get<APIResponse<Category[]>>("/categories")
         .then((res) => res.data),
     staleTime: 5 * 60 * 1000,
     retry: 1,

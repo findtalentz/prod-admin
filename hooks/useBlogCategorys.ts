@@ -8,7 +8,7 @@ const useBlogCategorys = () => {
     queryKey: ["categorys_blog"],
     queryFn: () =>
       apiClient
-        .get<APIResponse<Category[]>>("/categorys/blog")
+        .get<APIResponse<Category[]>>("/categories/blog")
         .then((res) => res.data),
     staleTime: 5 * 60 * 1000,
     retry: 1,
