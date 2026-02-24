@@ -57,7 +57,7 @@ export default function LoginPage() {
         sameSite: "strict",
         path: "/",
       });
-      window.location.reload();
+      window.location.href = "/dashboard";
     } catch (error) {
       if (error instanceof AxiosError && error.response) {
         return toast.error(error.response.data.message);

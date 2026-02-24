@@ -69,7 +69,7 @@ export default function SignupPage() {
         path: "/",
       });
       form.reset();
-      window.location.reload();
+      window.location.href = "/dashboard";
     } catch (error) {
       if (error instanceof AxiosError && error.response) {
         return toast.error(error.response.data.message);
