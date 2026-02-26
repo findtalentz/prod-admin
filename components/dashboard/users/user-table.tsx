@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Table,
   TableBody,
@@ -8,12 +10,15 @@ import {
 } from "@/components/ui/table";
 import { UserType } from "@/types/User";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import UserBlogDialog from "./user-delete-dialog";
 
 interface Porps {
   users: UserType[];
 }
 const UserTable = ({ users }: Porps) => {
+  const router = useRouter();
+
   return (
     <>
       <h2 className="text-2xl font-semibold mb-3">Users</h2>
@@ -35,7 +40,11 @@ const UserTable = ({ users }: Porps) => {
         </TableHeader>
         <TableBody>
           {users.map((user) => (
-            <TableRow key={user._id}>
+            <TableRow
+              key={user._id}
+              className="cursor-pointer hover:bg-muted/50"
+              onClick={() => router.push(`/dashboard/users/${user._id}`)}
+            >
               <TableCell>
                 <Image
                   src={user.image}
@@ -54,7 +63,7 @@ const UserTable = ({ users }: Porps) => {
               <TableCell> {user.balance} </TableCell>
               <TableCell> {user.totalEarning} </TableCell>
               <TableCell> {user.totalSpend} </TableCell>
-              <TableCell>
+              <TableCell onClick={(e) => e.stopPropagation()}>
                 <UserBlogDialog userId={user._id} />
               </TableCell>
             </TableRow>

@@ -6,10 +6,12 @@ import {
 } from "@/components/ui/sidebar";
 import {
   ArrowLeftRight,
+  Bell,
   Briefcase,
   House,
   IdCard,
   LayoutGrid,
+  Mail,
   NotebookPen,
   Receipt,
   Scale,
@@ -75,6 +77,18 @@ const items = [
   },
   {
     id: 10,
+    title: "Contacts",
+    url: "/dashboard/contacts",
+    icon: Mail,
+  },
+  {
+    id: 11,
+    title: "Subscriptions",
+    url: "/dashboard/subscriptions",
+    icon: Bell,
+  },
+  {
+    id: 12,
     title: "Settings",
     url: "/dashboard/settings",
     icon: Settings,

@@ -91,7 +91,11 @@ export default function JobTable({ jobs }: Props) {
       </TableHeader>
       <TableBody>
         {jobs.map((job) => (
-          <TableRow key={job._id}>
+          <TableRow
+            key={job._id}
+            className="cursor-pointer hover:bg-muted/50"
+            onClick={() => router.push(`/dashboard/jobs/${job._id}`)}
+          >
             <TableCell className="font-medium max-w-[200px] truncate">
               {job.title}
             </TableCell>
@@ -111,7 +115,7 @@ export default function JobTable({ jobs }: Props) {
               </Badge>
             </TableCell>
             <TableCell>{formatDate(job.createdAt as unknown as Date)}</TableCell>
-            <TableCell>
+            <TableCell onClick={(e) => e.stopPropagation()}>
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button size="sm" variant="destructive">
