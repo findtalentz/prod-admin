@@ -1,12 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { formatDate } from "@/lib/utils";
+import ContactTable from "@/components/dashboard/contacts/contact-table";
 import apiClient from "@/services/api-client";
 import { APIResponse } from "@/types/APIResponse";
 
@@ -22,40 +14,26 @@ interface ContactType {
 export const dynamic = "force-dynamic";
 
 export default async function ContactsPage() {
-  const { data } = await apiClient.get<APIResponse<ContactType[]>>("/contacts");
-  const contacts = data.data || [];
+  try {
+    const { data } = await apiClient.get<APIResponse<ContactType[]>>(
+      "/contacts",
+      { params: { pageSize: 100 } }
+    );
+    const contacts = data.data || [];
+    const totalCount = data.count || contacts.length;
 
-  return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold">Contact Messages ({contacts.length})</h2>
-      <div className="border rounded-2xl p-4">
-        {contacts.length === 0 ? (
-          <div className="text-center py-12 text-muted-foreground">
-            No contact messages yet.
-          </div>
-        ) : (
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Name</TableHead>
-                <TableHead>Email</TableHead>
-                <TableHead className="max-w-[300px]">Message</TableHead>
-                <TableHead>Date</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {contacts.map((contact) => (
-                <TableRow key={contact._id}>
-                  <TableCell>{contact.firstName} {contact.lastName}</TableCell>
-                  <TableCell>{contact.email}</TableCell>
-                  <TableCell className="max-w-[300px] truncate">{contact.message}</TableCell>
-                  <TableCell>{formatDate(contact.createdAt)}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        )}
+    return <ContactTable contacts={contacts} totalCount={totalCount} />;
+  } catch {
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-semibold">Contact Messages</h2>
+        <div className="border rounded-2xl p-8 text-center text-muted-foreground">
+          <p className="font-medium">Failed to load contacts</p>
+          <p className="text-sm mt-1">
+            Please check your connection and try again.
+          </p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
