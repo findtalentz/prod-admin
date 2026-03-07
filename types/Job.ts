@@ -15,7 +15,7 @@ export type Job = {
     _id: string;
     name: string;
   };
-  status: "IN_PROGRESS" | "OPEN" | "COMPLETED";
+  status: "IN_PROGRESS" | "OPEN" | "COMPLETED" | "CANCELLED";
   budgetAmount: number;
   description: string;
   location: string;
