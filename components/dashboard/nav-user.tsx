@@ -1,5 +1,5 @@
 "use client";
-import Cookies from "@/node_modules/@types/js-cookie";
+import Cookies from "js-cookie";
 import { BadgeCheck, Bell, ChevronsUpDown, LogOut } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

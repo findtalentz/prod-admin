@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import APIClient from "@/services/api-client";
 import Joi from "joi";
-import Cookies from "@/node_modules/@types/js-cookie";
+import Cookies from "js-cookie";
 import { useForm } from "react-hook-form";
 import { BeatLoader } from "react-spinners";
 

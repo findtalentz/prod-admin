@@ -26,7 +26,7 @@ import apiClient from "@/services/api-client";
 import { APIResponse } from "@/types/APIResponse";
 import { joiResolver } from "@hookform/resolvers/joi";
 import { AxiosError } from "axios";
-import Cookies from "@/node_modules/@types/js-cookie";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
